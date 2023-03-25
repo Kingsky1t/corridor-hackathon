@@ -4,17 +4,14 @@ import "../assets/css/NavBar.css"
 
 export const NavBar = () => {
   return (
-    <nav>
-      <div>
-        <h3>DocStruct</h3>
-      </div>
-
-      <div>
-        <ul>
-          <li><Link to="/visualization">Visualization</Link></li>
-          <li><Link to="/generate">Generate Pdf</Link></li>
-        </ul>
-      </div>
+    <nav className="navbar">
+      <a href="#" className="logo">DocStruct</a>
+      <ul className="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><Link to="/visualization">Visualize the Data</Link></li>
+        <li><Link to="/generate">Generate PDF</Link></li>
+      </ul>
     </nav>
-  )
+  );
 }
+

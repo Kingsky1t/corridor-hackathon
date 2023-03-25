@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from "axios"
+import "../assets/css/Visualization.css"
 
-export const Visualization = ()=> {
+export const Visualization = () => {
   const [file, setFile] = useState(null);
 
   const handleFileInputChange = (e) => {
@@ -25,13 +26,14 @@ export const Visualization = ()=> {
   };
 
   return (
-    <div>
+    <div className="upload-container">
       <form onSubmit={handleFileUpload}>
         <input type="file" name="file" onChange={handleFileInputChange} />
-        <button type="submit">Upload</button>
+        <button className="upload-btn" type="submit">Upload</button>
 
-        {image && <img src={`data:image/png;base64,${image}`} alt="generated image" />}   
+        {image && <img src={`data:image/png;base64,${image}`} alt="generated image" />}
       </form>
     </div>
   );
 }
+
